@@ -1,0 +1,98 @@
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_variables";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_mixins";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_grid";
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_wells";
+
+$dark-grey:         #545454;
+$darker-grey:       #4a4a4a;
+
+$light0: #c3c3c3;
+$light1: #e4e4e4;
+
+body {
+    background-color: $dark-grey;
+}
+
+#navbits,
+#sidebar,
+#misc-body,
+.pagination,
+.article-entry,
+article {
+    background-color: $light1;
+}
+
+.sidebar {
+    // width: fit-content;
+}
+
+articles {
+    // width: fit-content;
+}
+
+.pagination {
+    width: fit-content;
+}
+
+.article-entry {
+    // max-width: 400px;
+}
+
+#main {
+    @extend .col-xs-8;
+    padding-left: 0px;
+}
+
+#sidebar {
+    @extend .col-xs-4;
+    margin-top: 15px;
+    padding-left: 0px;
+    padding-right: 0px;
+
+}
+
+#header {
+    padding-bottom: 15px;
+}
+
+#title-link {
+    background-color: $light0;
+    margin-bottom: 0px;
+}
+
+#navbits {
+    background-color: $light1;
+}
+
+.article-entry-title, .sidebar-title, .article-title, .page-title {
+    background-color: $light0;
+}
+
+.sidebar-title {
+    margin-top: 0px;
+}
+
+.page-title {
+    margin-bottom: 0px;
+}
+
+.paginate-counter {
+    padding-right: 15px;
+}
+
+article ul {
+    // padding-left: 25px;
+    // margin-top: 0px;
+}
+
+.article-body {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+pre {
+    @extend .well;
+}
+
+code {
+}

@@ -1,0 +1,15 @@
+# -*- yaml -*-
+bootstrapVersion: 3
+extractStyles: true
+appStyles: source/assets/style/main.scss
+styleLoaders:
+  - style
+  - css
+  - sass
+styles:
+  mixins: true
+  normalize: true
+  scaffolding: true
+  grid: true
+scripts: false
+

@@ -1,0 +1,29 @@
+---
+pageable: true
+per_page: 2
+---
+<div class="articles">
+<% page_articles.each_with_index do |article, i| %>
+  <%= partial 'partials/article', locals: { article: article } %>
+<% end %>
+</div>
+
+<div class="pagination">
+  <% if paginate && num_pages > 1 %>
+    <span class="paginate-counter">Page <%= page_number %> of <%= num_pages %></span>
+
+    <% if prev_page %>
+      <span class="paginate-elt"><%= link_to '<<', prev_page %></span>
+    <% end %>
+  <% end %>
+
+  <% if paginate %>
+    <% if next_page and prev_page %>
+      &nbsp; &nbsp;
+    <% end %>
+
+    <% if next_page %>
+      <span class="paginate-elt"><%= link_to '>>', next_page %></span>
+    <% end %>
+  <% end %>
+</div>

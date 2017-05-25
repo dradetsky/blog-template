@@ -1,0 +1,10 @@
+<% wrap_layout :blog do %>
+  <article>
+    <header>
+      <h2 class="article-title"><%= current_article.title %>
+    </header>
+    <div class="article-body">
+      <%= yield %>
+    </div>
+  </article>
+<% end %>

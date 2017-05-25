@@ -1,0 +1,8 @@
+<div class="article-entry">
+  <h2 class="article-entry-title">
+    <%= link_to article.title, article %> <small><%= article.date.strftime('%b %e') %></small>
+  </h2>
+  <article>
+    <%= article.summary(250) %>
+  </article>
+</div>

@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="/assets/style/pack.css" rel="stylesheet">
+    <title>dmr blog<%= ' - ' + current_article.title unless current_article.nil? %></title>
+    <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
+    <script src="/assets/js/pack.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div id="header">
+        <h1 id="title-link"><%= link_to "dmr blog", "/" %></h1>
+        <div id="navbits">
+          <%= link_to "me", "/misc/me.html" %> |
+          <%= link_to "site", "/misc/site.html" %> |
+          <%= link_to "contact", "/misc/contact.html" %>
+
+        </div>
+      </div>
+
+      <%= yield %>
+    </div>
+  </body>
+</html>
